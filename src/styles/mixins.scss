@@ -1,0 +1,31 @@
+@mixin input($w,$bgc,$ml,$p,$fz,$brd,$rad,$tc,$outl) {
+    width: $w;
+    background-color: $bgc;
+    margin-left: $ml;
+    padding: $p;
+    font-size: $fz;
+    border: $brd;
+    border-radius: $rad;
+    color: $tc;
+    outline: $outl;
+  }
+
+  @mixin btn($w,$bgc,$m,$p,$fz,$brd,$rad,$c) {
+    width: $w;
+    background-color: $bgc;
+    margin: $m;
+    padding: $p;
+    font-size: $fz;
+    border: $brd;
+    border-radius: $rad;
+    color:$c;
+    cursor: pointer;
+  }
+  
+  @mixin formInput($w) {
+    @include input($w,$inputBg,20px,5px,25px,none,5px,$textcolor,none)
+  }
+
+  @mixin smallFormInput($w) {
+    @include input($w,$inputBg,10px,5px,18px,none,5px,$textcolor,none)
+  }

@@ -1,0 +1,16 @@
+@import './styles/constants.scss'; 
+@import './styles/mixins.scss'; 
+
+body {
+  background-image: url(./assets/bg.jpg);
+  background-size:cover;
+  background-repeat: no-repeat;
+  margin: 0;
+}
+
+
+@media (max-width: $breakpointWidthOne) {
+  body{
+    height: 100vh;
+  }
+}

@@ -1,0 +1,268 @@
+@import '../../styles/constants.scss'; 
+@import '../../styles/mixins.scss'; 
+
+*{
+  font-family: Merriweather, sans-serif;
+}
+.orderConteiner {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  background-color: $bgColor;
+  border-radius: 25px;
+  width: 520px;
+  height: 550px;
+  margin: 50px auto ;
+  padding-top: 20px;
+
+  .header {
+    font-size: 30px;
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 0;
+    color: $secondTextColor;
+    font-style: italic;
+  }
+
+  input {
+    @include formInput(90%);
+  }
+
+  select {
+    @include formInput(92%);
+  }
+
+  option {
+        background-color: rgba(214, 219, 221, 0.6);
+  }
+
+  p {
+      color:$secondTextColor;
+      font-size: 25px;
+      text-align: center;
+      margin-bottom: 10px;
+      margin-top: 5px; 
+  }
+
+  .subBtn {
+    @include btn(80%, $baseBlue, 10px auto, 10px, 25px, 2px solid $baseBlue, 5px,$secondTextColor);
+  }
+  .subBtn:hover {
+   background-color: rgb(111, 139, 222);
+   border: 2px solid rgb(111, 139, 222) ;
+  }
+  .error {
+    font-size: 25px;
+    text-align: center;
+    margin-bottom: 10px;
+    margin-top: 5px; 
+    color: $errorcolor;
+  }
+
+  .success {
+    font-size: 35px;
+    text-align: center;
+    color:rgb(4, 73, 4);
+  }
+
+  .formerror {
+    font-size: 1em;
+    padding: 10px ;
+    color:$errorcolor;
+  }
+
+}
+
+@media (max-width: $breakpointWidthOne) {
+  .orderConteiner {
+  width: 450px;
+  height: 470px;
+
+    .header {
+      font-size: 25px;
+    }
+
+    input {
+      @include formInput(90%);
+      font-size: 20px;
+    }
+  
+    select {
+      @include formInput(92%);
+      font-size: 20px;
+    }
+
+    .subBtn {
+      @include btn(80%, $baseBlue, 5px auto, 8px, 20px, 2px solid $baseBlue, 5px,$secondTextColor);
+    }
+
+    .error {
+      font-size: 20px;
+      text-align: center;
+      margin-bottom: 5px;
+      margin-top: 5px;
+    }
+    .success {
+      font-size: 25px;
+    }
+
+    p {
+      font-size: 20px;
+      text-align: center;
+      margin-bottom: 5px;
+      margin-top: 0px; 
+    }
+  }
+}
+
+@media (max-width: $breakpointWidthTwo) {
+  .orderConteiner {
+  width: 350px;
+  height: 370px;
+  padding-top: 5px;
+
+  .header {
+    font-size: 20px;
+  }
+
+  input {
+    @include smallFormInput(90%);
+  }
+
+  select {
+    @include smallFormInput(92%);
+  }
+  p {
+    font-size: 18px;
+    text-align: center;
+    margin-bottom: 5px;
+    margin-top: 0px; 
+  }
+  .subBtn {
+    @include btn(80%, $baseBlue, 5px auto, 8px, 18px, 2px solid $baseBlue, 5px,$secondTextColor);
+  }
+  .error {
+    font-size: 18px;
+    text-align: center;
+    margin-bottom: 3px;
+    margin-top: 3px;
+  }
+  .success {
+    font-size: 22px;
+  }
+ }
+}
+
+@media (max-width: $breakpointWidthThree) {
+  .orderConteiner {
+  width: 300px;
+  height: 370px;
+  padding-top: 5px;
+
+  .header {
+    font-size: 20px;
+  }
+
+  input {
+    @include smallFormInput(90%);
+  }
+
+  select {
+    @include smallFormInput(92%);
+  }
+  p {
+    font-size: 18px;
+    text-align: center;
+    margin-bottom: 5px;
+    margin-top: 0px; 
+  }
+  .subBtn {
+    @include btn(80%, $baseBlue, 5px auto, 8px, 18px, 2px solid $baseBlue, 5px,$secondTextColor);
+  }
+  .error{
+    font-size: 18px;
+    text-align: center;
+    margin-bottom: 3px;
+    margin-top: 3px;
+  }
+ }
+}
+
+@media (max-height: $breakpointHeigthOne) {
+  .orderConteiner {
+    width: 480px;
+    height: 480px;
+    margin: 20px auto ;
+    padding-top: 10px;
+
+    .header {
+      font-size: 25px;
+    }
+
+    input {
+      @include formInput(90%);
+      font-size: 20px;
+    }
+  
+    select {
+      @include formInput(92%);
+      font-size: 20px;
+    }
+
+    .subBtn {
+      @include btn(80%, $baseBlue, 5px auto, 8px, 20px, 2px solid $baseBlue, 5px,$secondTextColor);
+    }
+
+    .error{
+      font-size: 20px;
+      text-align: center;
+      margin-bottom: 5px;
+      margin-top: 5px;
+    }
+
+    p {
+      font-size: 20px;
+      text-align: center;
+      margin-bottom: 5px;
+      margin-top: 0px; 
+    }
+  }
+}
+
+@media (max-height: $breakpointHeigthTwo) {
+  .orderConteiner {
+    width: 480px;
+    height: 300px;
+    margin: 15px auto;
+    padding-top: 5px;
+
+    .header {
+      font-size: 18px;
+    }
+  
+    input {
+      @include smallFormInput(90%);
+      font-size: 15px;
+    }
+  
+    select {
+      @include smallFormInput(92%);
+      font-size: 15px;
+    }
+    p {
+      font-size: 14px;
+      text-align: center;
+      margin-bottom: 5px;
+      margin-top: 0px; 
+    }
+    .subBtn {
+      @include btn(80%, $baseBlue, 3px auto, 5px, 15px, 2px solid $baseBlue, 5px,$secondTextColor);
+    }
+    .error {
+      font-size: 13px;
+      text-align: center;
+      margin-bottom: 3px;
+      margin-top: 3px;
+    }
+  }
+}
